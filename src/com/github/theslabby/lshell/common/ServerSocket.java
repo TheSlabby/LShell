@@ -13,12 +13,13 @@ public class ServerSocket extends Thread{
 	}
 	
 	public void run() {
-		System.out.println("thread running!");
+		System.out.println("Server Thread now listening!");
 		
 		try {
 			socket = new java.net.ServerSocket(port);
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			System.out.println("Error starting server: "+port+" port most likely is currently in use!");
+			System.exit(0);
 		}
 		
 		while(socket != null) {

@@ -11,9 +11,10 @@ public class ConsoleReader extends Thread {
 	public void run() {
 		while (true) {
 			try {
-				String line = reader.readLine();
-				if (line != null) {
-					System.out.println(line);
+				String command = reader.readLine();
+				if (command != null) {
+					//handle commands here
+					System.out.println(command);
 				}else {
 					break;
 				}
