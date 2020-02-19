@@ -5,6 +5,8 @@ import com.github.theslabby.lshell.common.ServerSocket;
 
 public class ServerMain {
 
+	public static final String OS = System.getProperty("os.name").toLowerCase();
+	
 	public static void main(String[] args) {
 		
 		//start listening
